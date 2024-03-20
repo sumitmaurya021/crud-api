@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
     if doorkeeper_token
       return current_resource_owner
     end
-    warden.authanticate(:scope => :user)
+    warden.authanticate(scope: :user)
   end
 
   def current_resource_owner
